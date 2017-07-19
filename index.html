@@ -13,11 +13,11 @@
 	<link href="lib/css/zenburn.css" rel="stylesheet"><!-- Printing and PDF exports -->
 
 	<script>
-	   var link = document.createElement('link');
-	   link.rel = 'stylesheet';
-	   link.type = 'text/css';
-	   link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	   document.getElementsByTagName('head')[0].appendChild(link);
+	      var link = document.createElement('link');
+	      link.rel = 'stylesheet';
+	      link.type = 'text/css';
+	      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	      document.getElementsByTagName('head')[0].appendChild(link);
 	</script><!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -29,8 +29,8 @@
 			<section>
 				<h1>Metadata for Digital Collections</h1><br>
 				<p><small>Noah Geraci / July 19, 2017</small></p>
-				<p><small><a href="http://library.ucr.edu">UCR Library</a></small></p>
-				<p><small>Metadata and Technical Services</small></p>
+				<p><small><a href="http://library.ucr.edu">UCR Library</a><br>
+				Metadata and Technical Services</small></p>
 			</section>
 			<section>
 				<h2>Getting started</h2>
@@ -233,27 +233,27 @@
 			</script> 
 			<script>
 
-			         // More info https://github.com/hakimel/reveal.js#configuration
-			         Reveal.initialize({
-			             controls: true,
-			             progress: true,
-			             history: true,
-			             center: true,
+			                  // More info https://github.com/hakimel/reveal.js#configuration
+			                  Reveal.initialize({
+			                      controls: true,
+			                      progress: true,
+			                      history: true,
+			                      center: true,
 
-			             transition: 'none', // none/fade/slide/convex/concave/zoom
+			                      transition: 'none', // none/fade/slide/convex/concave/zoom
 
-			             // More info https://github.com/hakimel/reveal.js#dependencies
-			             dependencies: [
-			                 { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			                 { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			                 { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			                 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-			                 { src: 'plugin/zoom-js/zoom.js', async: true },
-			                 { src: 'plugin/notes/notes.js', async: true }
-			             ]
-			         });
+			                      // More info https://github.com/hakimel/reveal.js#dependencies
+			                      dependencies: [
+			                          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			                          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			                          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			                          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			                          { src: 'plugin/zoom-js/zoom.js', async: true },
+			                          { src: 'plugin/notes/notes.js', async: true }
+			                      ]
+			                  });
 
-			</script> 
+			</script>
 		</div>
 	</div>
 </body>
