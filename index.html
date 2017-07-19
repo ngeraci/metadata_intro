@@ -1,259 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Metadata for Digital Collections</title>
-	<meta content="training for UCR catalogers and friends, July 2017" name="description">
-	<meta content="Noah Geraci" name="author">
-	<meta content="yes" name="apple-mobile-web-app-capable">
-	<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-	<link href="css/reveal.css" rel="stylesheet">
-	<link href="css/theme/serif.css" id="theme" rel="stylesheet"><!-- Theme used for syntax highlighting of code -->
-	<link href="lib/css/zenburn.css" rel="stylesheet"><!-- Printing and PDF exports -->
 
-	<script>
-	      var link = document.createElement('link');
-	      link.rel = 'stylesheet';
-	      link.type = 'text/css';
-	      link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	      document.getElementsByTagName('head')[0].appendChild(link);
-	</script><!--[if lt IE 9]>
-        <script src="lib/js/html5shiv.js"></script>
-        <![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Metadata for Digital Collections</title>
+    <meta name="description" content="training for UCR catalogers and friends, July 2017">
+    <meta name="author" content="Noah Geraci">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/serif.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 </head>
+
 <body>
-	<div class="reveal">
-		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides">
-			<section>
-				<h1>Metadata for Digital Collections</h1><br>
-				<p><small>Noah Geraci / July 19, 2017</small></p>
-				<p><small><a href="http://library.ucr.edu">UCR Library</a><br>Metadata and Technical Services</small></p>
-			</section>
-			<section>
-				<h2>Getting started</h2>
-				<p>Green post-it: a question you have</p>
-				<p>Blue post-it: something you'd like to learn</p>
-			</section>
-			<section>
-				<h2>Workshop guidelines</h2>
-				<ul>
-					<li>One person talks at a time</li>
-					<li>No feigning surprise</li>
-					<li>No "well-actually"s</li>
-				</ul>
-				<p><small>(inspired by the <a href="https://www.recurse.com/manual">Recurse Center</a> social rules)</small></p>
-			</section>
-			<section>
-				<h2>What we'll cover</h2>
-				<ul>
-					<li>General overview: myths and facts, vocabulary, digital collections at UCR</li>
-					<li>Example: following a digitized archival photo</li>
-					<li>Tools and OpenRefine demo</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Myth</h2>
-				<p class="fragment">You have to be a technology whiz to work with digital collections metadata.</p>
-				<h2>Fact</h2>
-				<p class="fragment">Liking to solve problems, learn and experiment is more important than any specific tech skill.</p>
-			</section>
-			<section>
-				<h2>Myth</h2>
-				<p class="fragment">Being a cataloger and being a metadata specialist are two totally different jobs and skillsets.</p>
-				<h2>Fact</h2>
-				<p class="fragment">If you’ve cataloged in MARC, you’re already familiar with one major metadata standard, and with concepts like authority control.</p>
-			</section>
-			<section>
-				<h2>What is metadata?</h2><img data-src="images/metadatacollage.jpg" height="100%" width="100%">
-			</section>
-			<section>
-				<h2>…so what are we talking about today?</h2>
-				<blockquote>
-					Information we create according to standards and best practices to &ldquo;arrange, describe, track, and otherwise enhance access to information objects&rdquo;
-				</blockquote>
-				<p style="text-align:right"><small>Anne Gilliland, &ldquo;Setting the Stage,&rdquo; <i>Introduction to Metadata</i>, ed. Murtha Baca, p. 2</small></p>
-			</section>
-			<section>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Metadata for Digital Collections</h1>
+                <br/>
+                <p><small>Noah Geraci  /  July 19, 2017</small></p>
+            </section>
+            <section>
+                <h2>Getting started</h2>
+                <p>Green post-it: a question you have</p>
+                <p>Blue post-it: something you'd like to learn</p>
+            </section>
+            <section>
+                <h2>Workshop guidelines</h2>
+                <ul>
+                    <li>One person talks at a time</li>
+                    <li>No feigning surprise</li>
+                    <li>No "well-actually"s</li>
+                </ul>
+                <p><small>(inspired by the <a href="https://www.recurse.com/manual">Recurse Center</a> social rules)</small></p>
+            </section>
+
+            <section>
+                <h2>What we'll cover</h2>
+               <ul>
+               <li>General overview: myths and facts, vocabulary, digital collections at UCR</li>
+               <li>Example: following a digitized archival photo</li>
+               <li>Tools and OpenRefine demo</li>
+				</section>
+
+		
+				<section>
+						<h2>Myth</h2>
+						<p class="fragment ">You have to be a technology whiz to work with digital collections metadata.</p>
+						<h2>Fact</h2>
+						<p class="fragment ">Liking to solve problems, learn and experiment is more important than any specific tech skill.</p>
+				</section>
+
+				<section>
+						<h2>Myth</h2>
+						<p class="fragment ">Being a cataloger and being a metadata specialist are two totally different jobs and skillsets.</p>
+						<h2>Fact</h2>
+						<p class="fragment ">If you’ve cataloged in MARC, you’re already familiar with one major metadata standard, and with concepts like authority control.</p>
+				</section>
+
+
+
+
+
+            <section>
+                <h2>What is metadata?</h2>
+                <img width="100%" " height="100% " data-src="images/metadatacollage.jpg ">
+				</section>
+
+				<section>
+					<h2>…so what are we talking about today?</h2>
+					<blockquote>
+						Information we create according to standards and best practices to &ldquo;arrange, describe, track, and otherwise enhance access to information objects&rdquo;
+					</blockquote>
+					<p style="text-align:right "><small>Anne Gilliland, &ldquo;Setting the Stage,&rdquo; <i>Introduction to Metadata</i>, ed. Murtha Baca, p. 2</small></p>
+
+				</section>
+
+
+				<section>	
 				<h2>Digital collections at UCR</h2>
 				<table>
 					<tr>
-						<th>Digitized archival collections</th>
-						<td>&middot; Extended Dublin Core in Nuxeo, published to Calisphere</td>
+					<th>Digitized archival collections</th>
+					<td>&middot; Extended Dublin Core in Nuxeo, published to Calisphere</td>
 					</tr>
-					<tr style="font-size:0.7em">
-						<th>Web archives</th>
-						<td>&middot; Dublin Core in Archive-It</td>
+	
+					<tr style="font-size:0.7em ">
+					<th>Web archives</th>
+					<td>&middot; Dublin Core in Archive-It</td>
 					</tr>
-					<tr style="font-size:0.7em">
-						<th>Born-digital monographs (non-platform)</th>
-						<td>&middot; MARC record mapped to minimal Dublin Core in Nuxeo</td>
+
+					<tr style="font-size:0.7em ">
+					<th>Born-digital monographs (non-platform)</th>
+					<td>&middot; MARC record mapped to minimal Dublin Core in Nuxeo</td>
 					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Vocabulary</h2>
-				<p><em>schema</em>: a plan showing relationship between metadata elements, including semantics, syntax, and optionality. Also called <em>element set</em>, <em>scheme</em>.</p>
-				<p><em>crosswalk</em>: a table that shows equivalent elements or fields in multiple schema, used to transform metadata from one schema to another, i.e. MARC to MODS, EAD to Dublin Core, etc.</p>
-				<p><em>tabular data</em>: data represented in a table-like structure with rows and columns, such as an Excel file, CSV, TSV</p>
-			</section>
-			<section>
-				<h2>What makes good digital collections metadata?</h2>
-				<ol>
-					<li>Conforms to community standards</li>
-					<li>Supports interoperability</li>
-					<li>Uses authority control for description and collocation</li>
-					<li>Makes conditions of use of digital objects clear</li>
-					<li>Supports long-term preservation</li>
-					<li>Metadata records are objects themselves: <small></small>
-						<ul>
-							<li><small>authority, authenticity, archivability, persistence, unique identification</small></li>
-						</ul>
-					</li>
-				</ol>
-				<p style="text-align:right"><small>National Information Standards Organization, <a href="http://framework.niso.org"><i>A Framework of Guidance for Building Good Digital Collections</i></a>, 3rd edition. 2007.</small></p>
-			</section>
-			<section>
-				<h2>Metadata example:</h2>
-				<h3>Photo from the Tom&aacute;s Rivera archive</h3>
-			</section>
-			<section>
-				<img data-src="images/rivera1.jpg" height="100%" width="100%">
-			</section>
-			<section>
+
+					</ul>
+					</td>
+					</tr>
+					</div>
+					</table>
+				</section>
+
+				<section>
+					<h2>Vocabulary</h2>
+					<p><em>schema</em>: a plan showing relationship between metadata elements, including semantics, syntax, and optionality. Also called <em>element set</em>, <em>scheme</em>.</p>
+					<p><em>crosswalk</em>: a table that shows equivalent elements or fields in multiple schema, used to transform metadata from one schema to another, i.e. MARC to MODS, EAD to Dublin Core, etc.</p>
+					<p><em>tabular data</em>: data represented in a table-like structure with rows and columns, such as an Excel file, CSV, TSV</p>
+					</section>
+
+				<section>
+					<h2>What makes good digital collections metadata?</h2>
+					<ol>
+						<li>Conforms to community standards</li>
+						<li>Supports interoperability</li>
+						<li>Uses authority control for description and collocation</li>
+						<li>Makes conditions of use of digital objects clear</li>
+						<li>Supports long-term preservation</li>
+						<li>Metadata records are objects themselves:
+						<small><ul><li>authority, authenticity, archivability, persistence, unique identification</li></ul></small></li>
+					</ol>
+					
+					<p style="text-align:right "><small>National Information Standards Organization, <a href="http://framework.niso.org "><i>A Framework of Guidance for Building Good Digital Collections</i></a>, 3rd edition. 2007.</small></p>
+					</ol>
+				</section>
+
+				
+				<section>
+					<h2>Metadata example:</h2>
+					<h3>Photo from the Tom&aacute;s Rivera archive</h3>
+				</section>
+
+				<section>
+
+				<img width="100% " height="100% " data-src="images/rivera1.jpg ">
+
+				</section>
+
+				<section>
+
 				<h2>Finding aid:</h2>
-				<h3>Folder-level description</h3><img data-src="images/riverafolder.jpg" height="100%" width="100%">
-			</section>
-			<section>
-				<img data-src="images/rivera2.jpg" height="100%" width="100%">
-			</section>
-			<section>
-				<img data-src="images/calispheremeta.jpg" height="100%" width="100%"> <a href="https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/"><small>https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/</small></a>
-			</section>
-			<section>
-				<img data-src="images/calispheremeta2.jpg" height="100%" width="100%"> <a href="https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/"><small>https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/</small></a>
-			</section>
-			<section>
-				<h2>Nuxeo</h2><video data-src="video/nuxeo.mov" height="100%" width="100%"></video>
-			</section>
-			<section>
+				<h3>Folder-level description</h3>
+				
+				<img width="100% " height="100% " data-src="images/riverafolder.jpg ">
+
+				</section>
+
+				<section>
+				
+				<img width="100% " height="100% " data-src="images/rivera2.jpg ">
+
+				</section>
+
+				<section>
+				
+				<img width="100% " height="100% " data-src="images/calispheremeta.jpg ">
+
+				<a href="https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/ "><small>https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/</small></a>
+
+				</section>
+
+				<section>
+				
+				<img width="100% " height="100% " data-src="images/calispheremeta2.jpg ">
+
+				<a href="https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/ "><small>https://calisphere.org/item/c8bdcdff-f180-477d-a85d-75f31534276d/</small></a>
+
+
+				</section>
+
+				<section>
+
+				<h2>Nuxeo</h2>
+				
+				<video width="100% " height="100% " data-src="video/nuxeo.mov " controls/>
+
+				</section>
+
+				<section>
+
 				<h2>Nuxeo spreadsheet</h2>
-				<div class="stretch">
-					<iframe data-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKgNey0n98NghlRfn8my3Yd92Pjwf6YeqCjV7RSZ3Dlvbg1RPp5J2JL2R4aAbwEg3-1BqIFMZLv4pK/pubhtml?widget=true&amp;headers=false" height="100%" width="100%"></iframe>
+				
+				<div class="stretch ">
+				<iframe height="100% " width="100% " data-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKgNey0n98NghlRfn8my3Yd92Pjwf6YeqCjV7RSZ3Dlvbg1RPp5J2JL2R4aAbwEg3-1BqIFMZLv4pK/pubhtml?widget=true&amp;headers=false "></iframe>
 				</div>
-			</section>
-			<section>
+
+
+				</section>
+
+				<section>
+
 				<h2>Anatomy of a file name:</h2>
+
 				<h3>curivsc_253_005_001_011_001</h3>
+
 				<p><b>curivsc</b>: repository code</p>
 				<p><b>253</b>: collection number 253</p>
 				<p><b>005</b>: series 5</p>
 				<p><b>001</b>: box 1</p>
 				<p><b>011</b>: folder 11</p>
 				<p><b>001</b>: item 1</p>
-			</section>
-			<section>
-				<h1>Metadata tools</h1>
-			</section>
-			<section>
-				<blockquote>
-					&ldquo;The computer is incredibly fast, accurate, and stupid. Man is incredibly slow, inaccurate, and brilliant.&rdquo;
-				</blockquote>
-				<p style="text-align:right"><small>Leo Cherne, 1977</small></p>
-			</section>
-			<section>
+
+
+				</section>
+
+				<section>
+					<h1>Metadata tools</h1>
+				</section>
+
+
+
+
+				<section>
+					<blockquote>
+						&ldquo;The computer is incredibly fast, accurate, and stupid. Man is incredibly slow, inaccurate, and brilliant.&rdquo;
+					</blockquote>
+					<p style="text-align:right "><small>Leo Cherne, 1977</small></p>
+
+				</section>
+
+				<section>
 				<h2>A few tools</h2>
-				<ul>
+					<ul>
 					<li>Excel/Google Sheets</li>
 					<li>OpenRefine</li>
 					<li>Oxygen (XML editor)</li>
 					<li>pandas (Python library)</li>
-					<li>Plain-text editor
-						<div style="margin-left: 2em">
-							<small>(Notepad, Notepad++, SublimeText, many more... )</small>
-						</div>
-					</li>
+					<li>Plain-text editor <ul><small>(Notepad, Notepad++, SublimeText, many more... )</small></ul>
 					<li>MARCEdit</li>
+					</ul>
+				</section>
+
+			<section>
+			<h2>OpenRefine</h2>
+			<video width="100% " height="100% " data-src="video/openrefine_slow.mov"  controls/>
+			</section>
+
+            <section>
+                <h2>Wrapping up</h2>
+                <p>Green post-it: a question you have</p>
+                <p>Blue post-it: something you'd like to learn more about</p>
+            </section>
+
+		    <section>
+                <h2>General Resources</h2>
+                <ul>
+                <li><a href="http://www.getty.edu/publications/intrometadata/">Murtha Baca, <em>Introduction to Metadata</em></a></li> 
+				<li><a href="www.tandfonline.com/toc/wjlm20/current"><em>Journal of Library Metadata</em></li>
+				<li><a href="http://framework.niso.org/">NISO Framework</a></li> 
+				<li><a href="https://www.diglib.org/dlf-metadata-support-group/">DLF Metadata Support Group</a></li> 
+				<li><a href="https://librarycarpentry.github.io/">Library Carpentry</a></li>
+				<li><a href="http://www.mashcat.info/">MashCat</a></li>
 				</ul>
 			</section>
-			<section>
-				<h2>OpenRefine</h2><video data-src="video/openrefine_slow.mov" height="100%" width="100%"></video>
-			</section>
-			<section>
-				<h2>Wrapping up</h2>
-				<p>Green post-it: a question you have</p>
-				<p>Blue post-it: something you'd like to learn more about</p>
-			</section>
-			<section>
-				<h2>General Resources</h2>
-				<ul>
-					<li>
-						<a href="http://www.getty.edu/publications/intrometadata/">Murtha Baca, <em>Introduction to Metadata</em></a>
-					</li>
-					<li>
-						<a href="www.tandfonline.com/toc/wjlm20/current"><em>Journal of Library Metadata</em></a>
-					</li>
-					<li>
-						<a href="http://framework.niso.org/">NISO Framework</a>
-					</li>
-					<li>
-						<a href="https://www.diglib.org/dlf-metadata-support-group/">DLF Metadata Support Group</a>
-					</li>
-					<li>
-						<a href="https://librarycarpentry.github.io/"></a>
-					</li>
-					<li style="list-style: none">Library Carpentry</li>
-					<li>
-						<a href="http://www.mashcat.info/">MashCat</a>
-					</li>
-				</ul>
-			</section>
-			<section>
+
+		<section>
 				<h2>UC Resources</h2>
-				<ul>
-					<li>
-						<a href="https://help.oac.cdlib.org/support/solutions/articles/9000100809-nuxeo-metadata-scheme">Nuxeo Metadata Scheme</a>
-					</li>
-					<li>
-						<a href="https://help.oac.cdlib.org/support/home">OAC/Calisphere Contributor Help Center</a>
-					</li>
-					<li>
-						<a href="https://github.com/ucldc/nuxeo_spreadsheet">Nuxeo spreadsheet</a>
-					</li>
-					<li>
-						<a href="https://wiki.library.ucsf.edu/display/UCLCKG/Digital+Repository+Metadata+CKG">Digital Repository Metadata CKG</a>
-					</li>
-				</ul>
-			</section>
-			<script src="lib/js/head.min.js">
-			</script> 
-			<script src="js/reveal.js">
-			</script> 
-			<script>
+				<li><a href="https://help.oac.cdlib.org/support/solutions/articles/9000100809-nuxeo-metadata-scheme">Nuxeo Metadata Scheme</a></li>
+				<li><a href="https://help.oac.cdlib.org/support/home">OAC/Calisphere Contributor Help Center</a></li>
+				<li><a href="https://github.com/ucldc/nuxeo_spreadsheet">Nuxeo spreadsheet</a></li>
+				<li><a href="https://wiki.library.ucsf.edu/display/UCLCKG/Digital+Repository+Metadata+CKG">Digital Repository Metadata CKG</a></li></ul>
+				</section>
 
-			                  // More info https://github.com/hakimel/reveal.js#configuration
-			                  Reveal.initialize({
-			                      controls: true,
-			                      progress: true,
-			                      history: true,
-			                      center: true,
 
-			                      transition: 'none', // none/fade/slide/convex/concave/zoom
 
-			                      // More info https://github.com/hakimel/reveal.js#dependencies
-			                      dependencies: [
-			                          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-			                          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			                          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			                          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-			                          { src: 'plugin/zoom-js/zoom.js', async: true },
-			                          { src: 'plugin/notes/notes.js', async: true }
-			                      ]
-			                  });
 
-			</script>
-		</div>
-	</div>
-</body>
+
+		<script src="lib/js/head.min.js "></script>
+		<script src="js/reveal.js "></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
 </html>
