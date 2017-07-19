@@ -296,3 +296,45 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+.reveal .slides>section>.accessibilityWrapper,
+.reveal .slides>section>section>.accessibilityWrapper {
+  display: none;
+  visibility: hidden;
+}
+
+.reveal .slides section.present > .accessibilityWrapper {
+  display: block;
+  visibility: visible;
+  outline: none;
+}
+.reveal .slides.staticPage > section {
+  display: block !important;
+}
+.reveal #global-skip-link {
+  display: block;
+  font-size: 0.6em;
+  left: -50000px;
+  padding: 5px 10px;
+  position: fixed;
+  white-space: nowrap;
+}
+.reveal ul#table-of-contents {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+}
+.reveal ul#table-of-contents li {
+  margin: 0;
+  padding: 0;
+}
+.reveal ul#table-of-contents li a {
+  display: block;
+  font-size: 0.6em;
+  left: -50000px;
+  padding: 5px 10px;
+  position: absolute;
+  white-space: nowrap;
+}
